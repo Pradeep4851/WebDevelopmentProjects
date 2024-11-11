@@ -12,6 +12,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 .card-group{
@@ -36,6 +38,20 @@ body{
     color: white;
     cursor: pointer;
     margin-top: 10px
+}
+
+#add-new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 375px;
+    max-width: 100%;
+    border-radius: 16px;
+    border: 1px solid #333;
+    color: #fff;
+    box-shadow: 5px 5px 10px #fff;
+    cursor: pointer;
 }
 
 .card img{
@@ -116,21 +132,6 @@ body{
     opacity: 1;
 }
 
-/* .card-group:hover .card{
-    filter: blur(5px);
-    opacity: .6;
-}
-
-.card-group:hover .card:not(:hover){
-    filter: none;
-}
-
-.card-group .card:hover{
-    filter: none;
-    opacity: 1;
-} */
-
-
 /* Responsive Styles */
 
 /* Large Screens (Desktops) */
@@ -161,4 +162,96 @@ body{
         flex-direction: column;
         align-items: center;
     }
+}
+
+
+/* Add new card styling */
+
+#add-new-card{
+    display: none;
+}
+
+#add-new-card.show{
+    position: absolute;
+    bottom: 25px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    margin: 0 10px;
+
+    border: 1px solid #333;
+    border-radius: 16px;
+    background-color: #333;
+    overflow: hidden;
+}
+
+#add-new-card .close{
+    background-color: transparent;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #fff;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#add-new-card .close:hover{
+    background-color: red;
+}
+
+#add-new-card h1{
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin: 15px 10px 10px;
+}
+
+#add-new-card label{
+    padding-left: 10px;
+    color: #fff;
+    font-size: larger;
+    display: inline;
+    width: 50%;
+    cursor: pointer;
+}
+
+#add-new-card input[type="file"]{
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    color: #fff;    
+}
+
+#add-new-card input{
+    width: 100%;
+    max-width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+#add-new-card button{
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    color: #fff;
+    background-color: #3f26cc;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 120px;
+    margin: 10px;
 }
