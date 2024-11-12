@@ -8,12 +8,6 @@
 body{
     background: rgb(14, 14, 24);
     width: 100%;
-    /* height: 100vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
 }
 
 .card-group{
@@ -29,7 +23,7 @@ body{
 .card{
     position: relative;
     width: 300px;
-    height: 375px;
+    height: 400px;
     max-width: 100%;
     overflow: hidden;
     border-radius: 16px;
@@ -46,7 +40,7 @@ body{
     border-radius: 16px;
     object-fit: cover;
     pointer-events: none;
-    transition: 0.5s;
+    transition: opacity 0.5s ease;
 }
 
 .card .layer{
@@ -62,7 +56,7 @@ body{
 
 .card .info{
     position: absolute;
-    bottom: -50%;
+    bottom: -70%;
     color: #ffffff;
     padding: 15px;
     opacity: 0;
@@ -87,6 +81,7 @@ body{
 .info button a{
     text-decoration: none;
     color: #fff;
+    outline: none;
 }
 
 .info button{
@@ -98,11 +93,11 @@ body{
     margin-top: 8px;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    outline: none;
 }
 
 .card:hover, .card:hover img, .card:hover .layer{
     transform: scale(1.1);
-    z-index: 1;
 }
 
 .card:hover img {
@@ -174,19 +169,31 @@ body{
 
 /* Add new card styling */
 
-#add-new-card{
+#hidden{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
     display: none;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-#add-new-card.show{
+#add-new-card{
     position: absolute;
-    bottom: 25px;
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
     height: 500px;
     padding: 10px;
     margin: 0 10px;
@@ -259,6 +266,6 @@ body{
     font-size: 20px;
     cursor: pointer;
     text-align: center;
-    width: 120px;
-    margin: 10px;
+    width: 100%;
+    margin: 10px 0;
 }

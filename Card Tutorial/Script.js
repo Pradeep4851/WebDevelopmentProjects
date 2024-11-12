@@ -15,6 +15,12 @@ addCardButton.addEventListener('click', function(event) {
     const wikiURL = document.getElementById('wiki-url').value;
     const imageURL = URL.createObjectURL(imageInput.files[0]);
 
+    // Check if all required fields are filled
+    if (!imageURL || !heading || !titleDescription || !location || !locationDescription || !wikiURL) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
     const newCard = document.createElement('div');
 
     newCard.classList.add('card');
@@ -50,10 +56,10 @@ addCardButton.addEventListener('click', function(event) {
     document.getElementById('location-description').value = '';
     document.getElementById('wiki-url').value = '';
 
-    document.getElementById('add-new-card').style.display = 'none';
-    document.getElementById('add-new-card').classList.remove('show');
+    document.getElementById('hidden').style.display = 'none';
 });
 
+// Changing the hidden content property
 const plusBtn = document.getElementById('add-new');
 const closeBtn = document.querySelector('.close');
 
@@ -62,20 +68,12 @@ closeBtn.addEventListener('click', removeShow);
 
 function removeShow(){
 
-    const addNewCard = document.getElementById('add-new-card');
+    const addNewCard = document.getElementById('hidden');
 
-    if(addNewCard.classList.contains('show')){
-        addNewCard.style.display = 'none';
-        addNewCard.classList.remove('show');
-    }else{
-        addNewCard.classList.add('show');
+    if(addNewCard.style.display === 'none'){
         addNewCard.style.display = 'block';
+    }else{
+        addNewCard.style.display = 'none';
     }
 
 }
-
-const exploreBtn = document.querySelector('.explore');
-
-exploreBtn.addEventListener('click', function(){
-    alert('i am clicked');
-});

@@ -19,7 +19,7 @@
                 <h2>Location</h2>
                 <p>The temple is located in Vijayawada, Andhra Pradesh, India on the Indrakeeladri hill on the banks of Krishna River</p>
                 <button>
-                    <a href="https://en.wikipedia.org/wiki/Kanaka_Durga_Temple" target="_blank" rel="noopener noreferrer">
+                    <a href="https://en.wikipedia.org/wiki/Kanaka_Durga_Temple" target="_blank">
                         Explore
                     </a>
                 </button>
@@ -34,7 +34,7 @@
                 <p>The Taj Mahal is a white marble mausoleum in Agra, India, that was built by the Mughal emperor Shah Jahan to honor his wife, Mumtaz Mahal</p>
                 <h2>Location</h2>
                 <p>The Taj Mahal is on the south bank of the Yamuna River in Agra, India.</p>
-                <button >
+                <button>
                     <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">
                         Explore
                     </a>
@@ -50,11 +50,10 @@
                 <p>The Charminar is a historic monument and mosque in Hyderabad, India, that is known for its architecture, history, and culture</p>
                 <h2>Location</h2>
                 <p>The Charminar is located near the Musi river, close to Laad Bazaar and Mecca Masjid. The nearest railway station is Hyderabad Deccan Railway Station (HYB), also known as Nampally Railway Station.</p>
-                <a href="https://en.wikipedia.org/wiki/Charminar">
-                    Explore
-                </a>
-                <button class="explore">
-                    Explore
+                <button>
+                    <a href="https://en.wikipedia.org/wiki/Charminar" target="_blank">
+                        Explore
+                    </a>
                 </button>
             </div>
         </div>
@@ -67,7 +66,7 @@
                 <p>The Taj Mahal is a white marble mausoleum in Agra, India, that was built by the Mughal emperor Shah Jahan to honor his wife, Mumtaz Mahal</p>
                 <h2>Location</h2>
                 <p>The Taj Mahal is on the south bank of the Yamuna River in Agra, India.</p>
-                <button >
+                <button>
                     <a href="https://en.wikipedia.org/wiki/Golconda" target="_blank">
                         Explore
                     </a>
@@ -84,7 +83,7 @@
                 </p>
                 <h2>Location</h2>
                 <p>Sanchi Stupa is a Buddhist complex, famous for its Great Stupa in India and it is located, about 23 kilometers from Raisen town, district headquarter and 46 kilometres (29 mi) north-east of Bhopal, capital of Madhya Pradesh.</p>
-                <button >
+                <button>
                     <a href="https://en.wikipedia.org/wiki/Lighthouse" target="_blank">
                         Explore
                     </a>
@@ -101,7 +100,7 @@
                 <h2>Location</h2>
                 <p>The caves are located in the Sahyadri Hills, in a forest ravine in the Wagurna River valley, about 100 km northeast of Ellora and 104 km from Aurangabad.
                 </p>
-                <button >
+                <button>
                     <a href="https://en.wikipedia.org/wiki/Ajanta_Caves" target="_blank">
                         Explore
                     </a>
@@ -117,7 +116,7 @@
                 <p>Konark Sun Temple is a 13th-century CE Hindu Sun temple at Konark about 35 kilometres (22 mi) northeast from Puri city on the coastline in Puri district, Odisha, India. The temple is attributed to king Narasingha Deva I of the Eastern Ganga dynasty about 1250 CE.</p>
                 <h2>Location</h2>
                 <p>The Temple is located in an eponymous village (now NAC Area) about 35 kilometres (22 mi) northeast of Puri and 65 kilometres (40 mi) southeast of Bhubaneswar on the Bay of Bengal coastline in the Indian state of Odisha.</p>
-                <button >
+                <button>
                     <a href="https://en.wikipedia.org/wiki/Konark_Sun_Temple" target="_blank">
                         Explore
                     </a>
@@ -134,7 +133,7 @@
                 </p>
                 <h2>Location</h2>
                 <p>Agra Fort, large 16th-century fortress of red sandstone located on the Yamuna River in the historic city of Agra, west-central Uttar Pradesh, north-central India.</p>
-                <button id="fort">
+                <button>
                     <a href="https://en.wikipedia.org/wiki/Agra_Fort" target="_blank">
                         Explore
                     </a>
@@ -152,20 +151,22 @@
         
     </div>
     
-    <div id="add-new-card">
-        <h1>Add New Card Item</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg close" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-        </svg>
-        <label for="newImage">Select Image</label>
-        <input type="file" id="newImage" accept="image/*" required>
-        <input type="text" id="alt-name" placeholder="Alternate Name for image">
-        <input type="text" id="headding" placeholder="Title Name" required>
-        <input type="text" id="title-description" placeholder="About title" required>
-        <input type="text" id="location" placeholder="Location of place" required>
-        <input type="text" id="location-description" placeholder="Location description" required>
-        <input type="text" id="wiki-url" placeholder="wikipedia url" required>
-        <button id="add-card-btn">Add Card</button> 
+    <div id="hidden">
+        <div id="add-new-card">
+            <h1>Add New Card Item</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg close" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg>
+            <label for="newImage">Select Image</label>
+            <input type="file" id="newImage" accept="image/*" required>
+            <input type="text" id="alt-name" placeholder="Alternate Name for image">
+            <input type="text" id="headding" placeholder="Title Name" required>
+            <input type="text" id="title-description" placeholder="About title" required>
+            <input type="text" id="location" placeholder="Location of place" required>
+            <input type="text" id="location-description" placeholder="Location description" required>
+            <input type="text" id="wiki-url" placeholder="wikipedia url" required>
+            <button id="add-card-btn">Add Card</button> 
+        </div>
     </div>
 
     <!-- Adding own js file -->
